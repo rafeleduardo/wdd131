@@ -27,6 +27,7 @@ body {
     font-family: var(--font-family-main), serif;
     background: var(--platinum);
     color: var(--prussian-blue);
+    line-height: 1.3;
 }
 
 header {
@@ -92,9 +93,19 @@ footer {
     background: var(--prussian-blue);
     color: var(--platinum);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: 1.3rem;
     font-family: var(--font-family-accent), serif;
     border-top: 2px solid var(--cerulean);
+}
+
+footer p {
+    margin: 0.2rem 0;
+}
+
+.flag-caption {
+    font-size: 0.9rem;
+    line-height: 1.2;
 }
