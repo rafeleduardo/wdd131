@@ -1,0 +1,18 @@
+﻿/* Larger view overrides (min-width set in link tag) */
+.site-header {
+  grid-template-columns: auto 1fr;
+}
+.menu { display: none; }
+.site-nav { grid-column: auto; }
+.nav-list {
+  display: flex !important;
+  flex-direction: row;
+  gap: .5rem;
+}
+.gallery {
+  grid-template-columns: repeat(3, 1fr);
+}
+.card img {
+  height: 200px;
+}
+main { max-width: 1100px; margin: 0 auto; }
