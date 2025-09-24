@@ -82,14 +82,15 @@ function formatDate(iso){
 }
 
 function createCard(t){
-  const article = document.createElement('article');
-  article.className = 'card';
+  const figure = document.createElement('figure');
+  figure.className = 'card';
+
   const img = document.createElement('img');
   img.loading = 'lazy';
   img.src = t.imageUrl;
   img.alt = `${t.templeName} - ${t.location}`;
-  const content = document.createElement('div');
-  content.className = 'content';
+
+  const caption = document.createElement('figcaption');
   const h3 = document.createElement('h3');
   h3.textContent = t.templeName;
   const pLoc = document.createElement('p');
@@ -99,9 +100,9 @@ function createCard(t){
   pDed.className = 'meta';
   pDed.textContent = `Dedicated: ${formatDate(t.dedicated)} • Area: ${t.area.toLocaleString()} sq ft`;
 
-  content.append(h3, pLoc, pDed);
-  article.append(img, content);
-  return article;
+  caption.append(h3, pLoc, pDed);
+  figure.append(img, caption);
+  return figure;
 }
 
 function render(list){

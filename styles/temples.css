@@ -97,6 +97,9 @@ main { padding: 1rem; }
 .card .content {
   padding: .75rem .75rem 1rem;
 }
+.card figcaption {
+  padding: .75rem .75rem 1rem;
+}
 .card h3 {
   margin: .25rem 0 .25rem;
   font-size: 1rem;
@@ -112,4 +115,13 @@ main { padding: 1rem; }
   padding: 1rem;
   text-align: center;
   color: var(--muted);
+}
+
+@media (min-width: 480px) {
+  .brand h1 { font-size: 1.5rem; }
+}
+
+@media (max-width: 380px) {
+  .menu { width: 2rem; height: 2rem; font-size: 1.25rem; }
+  .card img { height: 160px; }
 }
