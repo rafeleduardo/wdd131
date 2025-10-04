@@ -10,14 +10,20 @@
   --header-bg: var(--primary-blue);
   --header-text: #ffffff;
   --footer-bg: #e5e7eb;
+  --font-body: 'Source Sans Pro', sans-serif;
+  --font-heading: 'Merriweather', serif;
 }
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
 body {
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  font-family: var(--font-body);
   color: var(--text);
   background: var(--bg);
   line-height: 1.6;
+}
+
+h1, h2 {
+    font-family: var(--font-heading);
 }
 
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
