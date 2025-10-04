@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Discover Sweden</title>
+    <meta name="description" content="A responsive single page about Sweden with data and weather sections." />
+    <meta name="author" content="Rafael Parra" />
+    <link rel="stylesheet" href="styles/place.css" />
+    <link rel="stylesheet" href="styles/place-large.css" media="(min-width: 800px)" />
+</head>
+<body>
+    <header class="site-header">
+        <h1 class="page-title">Sweden</h1>
+    </header>
+
+    <main>
+        <figure class="hero">
+            <img src="https://plus.unsplash.com/premium_photo-1697729828023-35f1eb84db3e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Stockholm, Sweden waterfront with colorful buildings" width="1600" height="900" loading="eager" />
+            <figcaption class="sr-only">Old Town in Stockholm, Sweden</figcaption>
+        </figure>
+
+        <section class="info card" aria-labelledby="data-heading">
+            <h2 id="data-heading">Data</h2>
+            <dl class="data-list">
+                <div><dt>Capital</dt><dd>Stockholm</dd></div>
+                <div><dt>Region</dt><dd>Northern Europe</dd></div>
+                <div><dt>Language</dt><dd>Swedish</dd></div>
+                <div><dt>Currency</dt><dd>Swedish krona (SEK)</dd></div>
+                <div><dt>Population</dt><dd>10.5 million (approx.)</dd></div>
+                <div><dt>Known for</dt><dd>Design, nature, archipelago, northern lights</dd></div>
+            </dl>
+        </section>
+
+        <section class="weather card" aria-labelledby="weather-heading">
+            <h2 id="weather-heading">Weather</h2>
+            <div class="icon" aria-hidden="true">⛅</div>
+            <dl class="data-list">
+                <div><dt>Condition</dt><dd>Partly cloudy</dd></div>
+                <div><dt>Temperature</dt><dd>14°C</dd></div>
+                <div><dt>Wind</dt><dd>12 km/h</dd></div>
+                <div><dt>Humidity</dt><dd>73%</dd></div>
+                <div><dt>Wind Chill</dt><dd id="windchill"></dd></div>
+            </dl>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>
+            <span id="year"></span> • Rafael Parra • Stockholm, Sweden
+        </p>
+        <p id="lastModified" aria-live="polite"></p>
+    </footer>
+
+    <script src="scripts/place.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+﻿main {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.hero { position: relative; }
+
+@media (min-width: 800px) {
+  main { padding: 1.25rem; }
+  .hero img { height: 520px; object-fit: cover; width: 100%; }
+
+  .info, .weather {
+    position: absolute;
+    top: 140px;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(6px);
+  }
+  .info { left: 2.5rem; }
+  .weather { right: 2.5rem; }
+
+  .weather .icon {
+    display: none;
+  }
+
+  .weather h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .weather h2::after {
+    content: '⛅';
+    font-size: 2rem;
+  }
+}
