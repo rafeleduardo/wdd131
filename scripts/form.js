@@ -35,5 +35,13 @@ products.forEach(product => {
     productNameSelect.appendChild(option);
 });
 
+const today = new Date();
+const year = today.getFullYear();
+const month = String(today.getMonth() + 1).padStart(2, '0');
+const day = String(today.getDate()).padStart(2, '0');
+const maxDate = `${year}-${month}-${day}`;
+
+document.getElementById('installDate').setAttribute('max', maxDate);
+
 document.getElementById('year').textContent = new Date().getFullYear();
 document.getElementById('lastModified').textContent = `Last Modified: ${document.lastModified}`;
