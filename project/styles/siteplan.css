@@ -1,0 +1,74 @@
+﻿/* Styles for the Fika Göteborg Site Plan */
+
+body {
+    background-color: #FAF3E6;
+    color: #333333;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #8B4513;
+}
+
+h1 {
+    border-bottom: 2px solid #e0d9ce;
+    padding-bottom: 0.5rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #e0d9ce;
+}
+
+img[alt*="Desktop wireframe"] {
+    max-width: 700px;
+}
+
+img[alt*="Mobile wireframe"] {
+    max-width: 350px;
+}
+
+.color-swatch {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #666;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.color-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.color-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.font-sample {
+    border: 1px solid #e0d9ce;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.font-sample h3 {
+    font-size: 2em;
+    margin-top: 0;
+}
+
+.font-sample p {
+    font-size: 1em;
+}
