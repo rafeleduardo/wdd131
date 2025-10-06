@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WDD 131 – Temples Album – Rafael Parra</title>
+    <meta name="description" content="WDD 131 – Temples picture album with responsive design, hamburger menu, and filters." />
+    <meta name="author" content="Rafael Parra" />
+    <link rel="stylesheet" href="styles/filtered-temples.css" />
+    <link rel="stylesheet" href="styles/filtered-temples-large.css" media="(min-width: 700px)" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="brand">
+            <h1>Temple Album</h1>
+        </div>
+        <button id="menu" class="menu" aria-label="Menu" aria-expanded="false" aria-controls="navlist">☰</button>
+        <nav class="site-nav">
+            <ul id="navlist" class="nav-list">
+                <li><a href="#" data-filter="all" class="active">All</a></li>
+                <li><a href="#" data-filter="old">Old</a></li>
+                <li><a href="#" data-filter="new">New</a></li>
+                <li><a href="#" data-filter="large">Large</a></li>
+                <li><a href="#" data-filter="small">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Temple Album</h1>
+        <section class="gallery" id="gallery" aria-live="polite"></section>
+    </main>
+
+    <footer class="site-footer">
+        <p>
+            <span id="year"></span> • Rafael Parra
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/filtered-temples.js" defer></script>
+</body>
+</html>
