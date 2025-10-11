@@ -6,6 +6,8 @@
     --card-background: #FFFFFF;
     --heading-font: 'Playfair Display', serif;
     --body-font: 'Lato', sans-serif;
+    --star-background: #ccc;
+    --star-foreground: #ffc107;
 }
 
 body {
@@ -22,39 +24,51 @@ body {
 header {
     background-color: var(--card-background);
     border-bottom: 1px solid #ddd;
-    padding: 2rem 0 1rem 0;
-    text-align: center;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #course-title {
-    display: block;
     font-family: var(--heading-font);
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     color: var(--text-color);
-    margin-bottom: 1rem;
 }
 
-nav {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+#hamburger-menu {
+    display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--primary-color);
 }
 
 .nav-menu {
-    display: flex;
-    gap: 2rem;
+    display: none; /* Hidden by default on mobile */
     list-style: none;
     padding: 0;
     margin: 0;
+    position: absolute;
+    top: 75px; /* Adjust based on header height */
+    left: 0;
+    width: 100%;
+    background-color: var(--card-background);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.nav-menu.open {
+    display: block; /* Show when toggled */
 }
 
 .nav-menu li a {
+    display: block;
+    text-align: center;
+    padding: 1rem;
     text-decoration: none;
     color: var(--primary-color);
     font-weight: 700;
-    font-size: 1.1rem;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
     transition: background 0.2s, color 0.2s;
 }
 
@@ -125,6 +139,12 @@ main {
     box-shadow: 0 1px 4px rgba(0,0,0,0.06);
     padding: 1rem;
     text-align: center;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.cafe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
 
 .cafe-card img {
@@ -150,6 +170,146 @@ main {
     margin: 0.5rem 0 0 0;
 }
 
+/* Contact Form Styles */
+.contact-main {
+    background: var(--card-background);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.suggestion-form fieldset {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.suggestion-form legend {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    padding: 0 0.5rem;
+}
+
+.suggestion-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.suggestion-form input[type="text"],
+.suggestion-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: var(--body-font);
+}
+
+.suggestion-form input[type="submit"] {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--card-background);
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+/* Cafe Detail Page Styles */
+.cafe-detail {
+    background: var(--card-background);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.cafe-detail-img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.cafe-detail h2 {
+    font-family: var(--heading-font);
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin: 0 0 1rem 0;
+}
+
+.cafe-detail p#cafe-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.cafe-detail ul {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+    border-top: 1px solid #eee;
+}
+
+.cafe-detail ul li {
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cafe-detail ul li:last-child {
+    border-bottom: none;
+}
+
+.cafe-detail ul li strong {
+    color: var(--primary-color);
+}
+
+.star-rating-container {
+    position: relative;
+    display: inline-block;
+    font-size: 1.5rem;
+}
+
+.stars-background {
+    color: var(--star-background);
+}
+
+.stars-foreground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    color: var(--star-foreground);
+}
+
+.back-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.back-btn:hover {
+    background: var(--primary-color);
+    color: var(--card-background);
+}
+
+.error {
+    text-align: center;
+}
+
 footer {
     background: var(--card-background);
     border-top: 1px solid #ddd;
@@ -157,6 +317,24 @@ footer {
     padding: 1.5rem 0;
     font-size: 1rem;
     color: var(--text-color);
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+    #hamburger-menu {
+        display: none; /* Hide hamburger on large screens */
+    }
+    .nav-menu {
+        display: flex; /* Show nav items horizontally */
+        position: static;
+        box-shadow: none;
+        width: auto;
+        gap: 2rem;
+    }
+    .nav-menu li a {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+    }
 }
 
 @media (max-width: 900px) {
@@ -174,25 +352,6 @@ footer {
 }
 
 @media (max-width: 600px) {
-    header {
-        padding: 1rem 0 0.5rem 0;
-    }
-    #course-title {
-        font-size: 1.5rem;
-        margin-bottom: 0.5rem;
-    }
-    nav {
-        justify-content: center;
-    }
-    .nav-menu {
-        flex-direction: column;
-        gap: 0.5rem;
-        align-items: center;
-    }
-    .nav-menu li a {
-        font-size: 1rem;
-        padding: 0.5rem 0.8rem;
-    }
     main {
         margin: 1rem auto;
         gap: 1rem;
@@ -226,5 +385,11 @@ footer {
     footer {
         padding: 1rem 0;
         font-size: 0.95rem;
+    }
+    .cafe-detail {
+        padding: 1rem;
+    }
+    .cafe-detail h2 {
+        font-size: 2rem;
     }
 }

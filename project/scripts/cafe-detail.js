@@ -27,7 +27,13 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('cafe-address').textContent = cafe.address;
     document.getElementById('cafe-hours').textContent = cafe.hours;
     document.getElementById('cafe-established').textContent = cafe.established;
-    document.getElementById('cafe-rating').textContent = cafe.rating;
+    
+    // Handle the star rating
+    const ratingValue = cafe.rating;
+    document.getElementById('cafe-rating-value').textContent = ratingValue;
+    const percentage = (ratingValue / 5) * 100;
+    document.getElementById('stars-foreground').style.width = `${percentage}%`;
+
     const websiteLink = document.getElementById('cafe-website');
     websiteLink.href = cafe.website;
     websiteLink.textContent = cafe.website ? 'Visit site' : 'N/A';

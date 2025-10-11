@@ -10,12 +10,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/large.css" media="(min-width: 768px)">
 </head>
 <body>
     <header>
         <span id="course-title">GOTHENBURG'S FIKA SCENE</span>
         <nav>
+            <button id="hamburger-menu" aria-label="Open navigation menu">☰</button>
             <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Fika</a></li>
@@ -24,28 +24,36 @@
             </ul>
         </nav>
     </header>
+
     <main class="contact-main">
-        <h2>Suggest a Cafe</h2>
-        <p>Know a great spot that should be on our list? Fill out the form below to suggest it!</p>
-        <form action="thankyou.html" method="get">
-            <label for="cafeName">Cafe Name</label>
-            <input type="text" id="cafeName" name="cafeName" required>
+        <form action="thankyou.html" method="get" class="suggestion-form">
+            <fieldset>
+                <legend>Cafe Information</legend>
+                <label for="cafeName">Cafe Name</label>
+                <input type="text" id="cafeName" name="cafeName" required>
 
-            <label for="location">Location or Address</label>
-            <input type="text" id="location" name="location" required>
+                <label for="location">Location or Address</label>
+                <input type="text" id="location" name="location" required>
+            </fieldset>
 
-            <label for="reason">Why do you recommend it?</label>
-            <textarea id="reason" name="reason" rows="5" required></textarea>
+            <fieldset>
+                <legend>Your Recommendation</legend>
+                <label for="reason">Why do you recommend it? (Tell us what makes it special)</label>
+                <textarea id="reason" name="reason" rows="6" required></textarea>
+            </fieldset>
 
-            <label for="userName">Your Name (Optional)</label>
-            <input type="text" id="userName" name="userName">
+            <fieldset>
+                <legend>Your Information (Optional)</legend>
+                <label for="userName">Your Name</label>
+                <input type="text" id="userName" name="userName">
+            </fieldset>
 
             <input type="submit" value="Submit Suggestion">
         </form>
     </main>
+
     <footer>
-        <p>&copy; <span id="current-year"></span> Fika Göteborg | Rafael Parra</p>
-        <p>Last Modified: <span id="last-modified"></span></p>
+        <p>&copy; <span id="current-year"></span> Rafael Parra | Venezuela</p>
     </footer>
     <script src="scripts/main.js" defer></script>
 </body>

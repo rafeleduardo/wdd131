@@ -10,12 +10,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/large.css" media="(min-width: 768px)">
 </head>
 <body>
     <header>
         <span id="course-title">GOTHENBURG'S FIKA SCENE</span>
         <nav>
+            <button id="hamburger-menu" aria-label="Open navigation menu">☰</button>
             <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html" class="active">About Fika</a></li>
@@ -24,6 +24,7 @@
             </ul>
         </nav>
     </header>
+
     <main class="about-main">
         <section class="about-content">
             <h2>What is Fika?</h2>
@@ -36,10 +37,9 @@
             <figcaption>A classic fika with coffee and kanelbullar (cinnamon buns).</figcaption>
         </figure>
     </main>
+
     <footer>
-        <p>&copy; <span id="current-year"></span> Fika Göteborg | Rafael Parra</p>
-        <p>Last Modified: <span id="last-modified"></span></p>
-        <p><a href="references.html">References</a></p>
+        <p>&copy; <span id="current-year"></span> Rafael Parra | Venezuela</p>
     </footer>
     <script src="scripts/main.js" defer></script>
 </body>
