@@ -1,4 +1,4 @@
-﻿/* Variables de color y tipografía */
+﻿/* Color and font definitions */
 :root {
     --primary-color: #8B4513;
     --background-color: #FAF3E6;
@@ -11,7 +11,7 @@
 }
 
 body {
-    font-family: var(--body-font);
+    font-family: var(--body-font), serif;
     background-color: var(--background-color);
     color: var(--text-color);
     margin: 0;
@@ -31,7 +31,7 @@ header {
 }
 
 #course-title {
-    font-family: var(--heading-font);
+    font-family: var(--heading-font), serif;
     font-size: 1.5rem;
     color: var(--text-color);
 }
@@ -46,12 +46,12 @@ header {
 }
 
 .nav-menu {
-    display: none; /* Hidden by default on mobile */
+    display: none;
     list-style: none;
     padding: 0;
     margin: 0;
     position: absolute;
-    top: 75px; /* Adjust based on header height */
+    top: 75px;
     left: 0;
     width: 100%;
     background-color: var(--card-background);
@@ -59,7 +59,7 @@ header {
 }
 
 .nav-menu.open {
-    display: block; /* Show when toggled */
+    display: block;
 }
 
 .nav-menu li a {
@@ -79,48 +79,68 @@ header {
 }
 
 main {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 2rem auto;
+    padding: 0 1rem;
     display: grid;
     gap: 2rem;
+}
+
+.content-wrapper {
+    background: var(--card-background);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
 .hero {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    background: var(--card-background);
+    text-align: center;
+    min-height: 400px;
+    background: #000;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.04);
     padding: 2rem;
-    gap: 2rem;
 }
 
-.hero-img {
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    max-width: 400px;
-    border-radius: 8px;
-    background: #eee;
-    aspect-ratio: 16/9;
+    height: 100%;
     object-fit: cover;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 8px;
+    color: white;
 }
 
 .hero-content h2 {
-    font-family: var(--heading-font);
+    font-family: var(--heading-font), serif;
     font-size: 2rem;
     margin: 0 0 1rem 0;
-    color: var(--primary-color);
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
-.featured {
-    background: var(--card-background);
-    border-radius: 8px;
-    padding: 2rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+.hero-content p {
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
 
 .featured h2 {
-    font-family: var(--heading-font);
+    font-family: var(--heading-font), serif;
     font-size: 1.7rem;
     color: var(--text-color);
     margin-bottom: 2rem;
@@ -147,9 +167,13 @@ main {
     box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
 
+.cafe-card a.cafe-link {
+    text-decoration: none;
+    color: inherit;
+}
+
 .cafe-card img {
     width: 100%;
-    max-width: 180px;
     border-radius: 6px;
     background: #eee;
     aspect-ratio: 4/3;
@@ -158,7 +182,7 @@ main {
 }
 
 .cafe-card h3 {
-    font-family: var(--heading-font);
+    font-family: var(--heading-font), serif;
     font-size: 1.2rem;
     color: var(--primary-color);
     margin: 0.5rem 0;
@@ -170,14 +194,28 @@ main {
     margin: 0.5rem 0 0 0;
 }
 
-/* Contact Form Styles */
-.contact-main {
-    background: var(--card-background);
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+/* About Page Styles */
+.about-main p {
+    line-height: 1.7;
 }
 
+.about-image {
+    margin: 1rem 0;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.about-image figcaption {
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+/* Contact Form Styles */
 .suggestion-form fieldset {
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -186,7 +224,7 @@ main {
 }
 
 .suggestion-form legend {
-    font-family: var(--heading-font);
+    font-family: var(--heading-font), serif;
     color: var(--primary-color);
     font-size: 1.2rem;
     padding: 0 0.5rem;
@@ -204,7 +242,7 @@ main {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-    font-family: var(--body-font);
+    font-family: var(--body-font), serif;
 }
 
 .suggestion-form input[type="submit"] {
@@ -220,13 +258,6 @@ main {
 }
 
 /* Cafe Detail Page Styles */
-.cafe-detail {
-    background: var(--card-background);
-    border-radius: 8px;
-    padding: 2rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-}
-
 .cafe-detail-img {
     width: 100%;
     max-height: 400px;
@@ -236,7 +267,7 @@ main {
 }
 
 .cafe-detail h2 {
-    font-family: var(--heading-font);
+    font-family: var(--heading-font), serif;
     font-size: 2.5rem;
     color: var(--primary-color);
     margin: 0 0 1rem 0;
@@ -322,10 +353,10 @@ footer {
 /* Responsive Styles */
 @media (min-width: 768px) {
     #hamburger-menu {
-        display: none; /* Hide hamburger on large screens */
+        display: none;
     }
     .nav-menu {
-        display: flex; /* Show nav items horizontally */
+        display: flex;
         position: static;
         box-shadow: none;
         width: auto;
@@ -334,6 +365,12 @@ footer {
     .nav-menu li a {
         display: inline-block;
         padding: 0.5rem 1rem;
+    }
+    .about-image {
+        float: right;
+        width: 40%;
+        max-width: 320px;
+        margin: 0.5rem 0 1rem 2rem;
     }
 }
 
@@ -362,19 +399,8 @@ footer {
         padding: 1rem;
         gap: 1rem;
     }
-    .hero-img {
-        max-width: 100%;
-        margin: 0 auto 1rem auto;
-    }
     .featured {
         padding: 1rem;
-    }
-    .featured-cafes {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-    .cafe-card img {
-        max-width: 100%;
     }
     .cafe-card h3 {
         font-size: 1rem;

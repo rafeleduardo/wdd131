@@ -8,7 +8,9 @@
     <meta name="author" content="Rafael Parra">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="preload" fetchpriority="high" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" fetchpriority="high" href="videos/gothenburg-fika-cinematic-video.webm" as="video" type="video/webm" fetchpriority="high">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap"></noscript>
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
@@ -26,22 +28,22 @@
     </header>
     <main>
         <section class="hero">
-            <img src="images/hero-placeholder.webp" alt="Fika hero" class="hero-img">
+            <video autoplay loop muted playsinline poster="images/fika-mood.webp" class="hero-video">
+                <source src="videos/gothenburg-fika-cinematic-video.webm" type="video/webm">
+            </video>
             <div class="hero-content">
                 <h2>Discover Your Next Fika</h2>
                 <p>A curated guide to the best independent cafes in Gothenburg.</p>
                 <p>Find cozy spots, great coffee, and delicious pastries.</p>
             </div>
         </section>
-        <section class="featured">
+        <section class="featured content-wrapper">
             <h2>FEATURED CAFES</h2>
-            <div class="featured-cafes" id="featured-cafes">
-                <!-- Cafe cards will be dynamically inserted here -->
-            </div>
+            <div class="featured-cafes" id="featured-cafes"></div>
         </section>
     </main>
     <footer>
-        <p>&copy; <span id="current-year"></span> Rafael Parra | Venezuela</p>
+        <p>&copy; <span id="current-year"></span> Rafael Parra</p>
     </footer>
     <script src="scripts/cafes.js" defer></script>
     <script src="scripts/main.js" defer></script>

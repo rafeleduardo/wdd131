@@ -3,8 +3,8 @@
     id: 1,
     name: "Café Husaren",
     image: [
-        "images/café-husaren-1.webp",
-        "images/café-husaren-2.webp"
+        "images/cafe-husaren-1.webp",
+        "images/cafe-husaren-2.webp"
     ],
     description: "Located in the heart of Haga, Café Husaren is famous for its giant cinnamon bun (kanelbulle). The classic and cozy atmosphere makes it perfect for an authentic Swedish fika experience.",
     address: "Haga Nygata 28, 411 22 Gothenburg",
@@ -73,8 +73,8 @@
     id: 6,
     name: "Café Fröken Olsson",
     image: [
-        "images/cafe-froken-olsson-1.webp",
-        "images/cafe-froken-olsson-2.webp"
+        "images/cafe-fröken-olsson-1.webp",
+        "images/cafe-fröken-olsson-2.webp"
     ],
     description: "A cozy café with a charming garden, offering homemade cakes and a relaxing atmosphere. Perfect for a quiet fika in the city center.",
     address: "Östra Larmgatan 14, 411 07 Gothenburg",
@@ -115,8 +115,8 @@
     id: 9,
     name: "Café Marmelad",
     image: [
-        "images/cafe-marmelad-1.webp",
-        "images/cafe-marmelad-2.webp"
+        "images/kafe-marmelad-1.webp",
+        "images/kafe-marmelad-2.webp"
     ],
     description: "A lively café with a bohemian vibe, offering organic pastries and fair-trade coffee. Popular for its music events and creative crowd.",
     address: "Mariagatan 17, 414 71 Gothenburg",
