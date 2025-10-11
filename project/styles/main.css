@@ -341,6 +341,22 @@ main {
     text-align: center;
 }
 
+/* Thank You Page Styles */
+.thankyou-main {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+​
+.thankyou-content {
+    background: var(--card-background);
+    border-radius: 8px;
+    padding: 3rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
 footer {
     background: var(--card-background);
     border-top: 1px solid #ddd;
