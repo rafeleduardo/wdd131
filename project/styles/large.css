@@ -1,0 +1,32 @@
+﻿@media (min-width: 768px) {
+    nav #hamburger-menu {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        position: static;
+        width: auto;
+    }
+
+    nav ul li a {
+        padding: 0.5rem 1rem;
+    }
+
+    .cafe-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1024px) {
+    .cafe-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

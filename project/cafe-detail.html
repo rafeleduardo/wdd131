@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Detail - Fika Gothenburg</title>
+    <meta name="description" content="Detailed information about a featured cafe in Gothenburg.">
+    <meta name="author" content="Rafael Parra">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/cafes.js" defer></script>
+    <script src="scripts/cafe-detail.js" defer></script>
+</head>
+<body>
+    <header>
+        <span id="course-title">GOTHENBURG'S FIKA SCENE</span>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Fika</a></li>
+                <li><a href="contact.html">Suggest a Cafe</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="cafe-detail">
+        <section class="cafe-hero">
+            <img id="cafe-detail-img" src="" alt="Cafe Image" class="cafe-detail-img">
+            <div class="cafe-detail-content">
+                <h1 id="cafe-name"></h1>
+                <p id="cafe-description"></p>
+                <p><strong>Address:</strong> <span id="cafe-address"></span></p>
+                <p><strong>Hours:</strong> <span id="cafe-hours"></span></p>
+                <p><strong>Established:</strong> <span id="cafe-established"></span></p>
+                <p><strong>Rating:</strong> <span id="cafe-rating"></span> / 5</p>
+                <p><strong>Website:</strong> <a id="cafe-website" href="#" target="_blank" rel="noopener">Visit site</a></p>
+                <a href="index.html" class="back-btn">&#8592; Back to Cafes</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="current-year"></span> Rafael Parra | Venezuela</p>
+        <p id="lastModified"></p>
+    </footer>
+    <script src="scripts/main.js" defer></script>
+</body>
+</html>

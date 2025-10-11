@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fika Göteborg - Your Guide to Gothenburg's Best Cafes</title>
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals. Rafael Parra. Guide to Gothenburg's best independent cafes, Swedish fika, coffee, pastries, cozy atmospheres.">
+    <meta name="author" content="Rafael Parra">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <span id="course-title">GOTHENBURG'S FIKA SCENE</span>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Fika</a></li>
+                <li><a href="contact.html">Suggest a Cafe</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <img src="images/hero-placeholder.webp" alt="Fika hero" class="hero-img">
+            <div class="hero-content">
+                <h2>Discover Your Next Fika</h2>
+                <p>A curated guide to the best independent cafes in Gothenburg.</p>
+                <p>Find cozy spots, great coffee, and delicious pastries.</p>
+            </div>
+        </section>
+        <section class="featured">
+            <h2>FEATURED CAFES</h2>
+            <div class="featured-cafes" id="featured-cafes">
+                <!-- Cafe cards will be dynamically inserted here -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="current-year"></span> Rafael Parra | Venezuela</p>
+        <p id="lastModified"></p>
+    </footer>
+    <script src="scripts/cafes.js" defer></script>
+    <script src="scripts/main.js" defer></script>
+</body>
+</html>

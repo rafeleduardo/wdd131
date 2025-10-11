@@ -1,0 +1,230 @@
+﻿/* Variables de color y tipografía */
+:root {
+    --primary-color: #8B4513;
+    --background-color: #FAF3E6;
+    --text-color: #333333;
+    --card-background: #FFFFFF;
+    --heading-font: 'Playfair Display', serif;
+    --body-font: 'Lato', sans-serif;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--card-background);
+    border-bottom: 1px solid #ddd;
+    padding: 2rem 0 1rem 0;
+    text-align: center;
+}
+
+#course-title {
+    display: block;
+    font-family: var(--heading-font);
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a.active {
+    background: var(--primary-color);
+    color: var(--card-background);
+}
+
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    display: grid;
+    gap: 2rem;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    background: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.hero-img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    background: #eee;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.hero-content h2 {
+    font-family: var(--heading-font);
+    font-size: 2rem;
+    margin: 0 0 1rem 0;
+    color: var(--primary-color);
+}
+
+.featured {
+    background: var(--card-background);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.featured h2 {
+    font-family: var(--heading-font);
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.featured-cafes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.cafe-card {
+    background: var(--background-color);
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    padding: 1rem;
+    text-align: center;
+}
+
+.cafe-card img {
+    width: 100%;
+    max-width: 180px;
+    border-radius: 6px;
+    background: #eee;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.cafe-card h3 {
+    font-family: var(--heading-font);
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin: 0.5rem 0;
+}
+
+.cafe-card p {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin: 0.5rem 0 0 0;
+}
+
+footer {
+    background: var(--card-background);
+    border-top: 1px solid #ddd;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+@media (max-width: 900px) {
+    main {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .featured-cafes {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 1rem 0 0.5rem 0;
+    }
+    #course-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    nav {
+        justify-content: center;
+    }
+    .nav-menu {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+    }
+    .nav-menu li a {
+        font-size: 1rem;
+        padding: 0.5rem 0.8rem;
+    }
+    main {
+        margin: 1rem auto;
+        gap: 1rem;
+        padding: 0 0.5rem;
+    }
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+        gap: 1rem;
+    }
+    .hero-img {
+        max-width: 100%;
+        margin: 0 auto 1rem auto;
+    }
+    .featured {
+        padding: 1rem;
+    }
+    .featured-cafes {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .cafe-card img {
+        max-width: 100%;
+    }
+    .cafe-card h3 {
+        font-size: 1rem;
+    }
+    .cafe-card p {
+        font-size: 0.95rem;
+    }
+    footer {
+        padding: 1rem 0;
+        font-size: 0.95rem;
+    }
+}
